@@ -20,7 +20,7 @@ const config = {
 };
 
 class ServiceObj {
-  captcha_key = "";
+  captcha_key = process.env.CAPTCHA_KEY;
 
   async login(form) {
     const res = await axios.post(`${api_link}/amjad/AmjadApp/Upload`, form, config);
